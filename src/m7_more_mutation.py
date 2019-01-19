@@ -27,9 +27,9 @@ def run_test_RETURN_circle():
     print('If an error msg appears at any point,')
     print('then you have FAILED this test.')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Tests 1 and 2 (on one window):
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     window = rg.RoseWindow(500, 400, 'Testing RETURN_circle')
     text = rg.Text(rg.Point(250, 125), '')
     text.attach_to(window.initial_canvas)
@@ -98,12 +98,12 @@ def run_test_RETURN_circle():
     window.render(0.5)
     window.get_next_mouse_click()
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Note: The following statements make the variable  new_circle
     #       refer to a new, green circle.  So we can no longer refer
     #       to the RED circle (to which the variable  new_circle  once
     #       referred).  But the red circle still exists!
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
     new_circle = RETURN_circle(circle, 'green')
 
@@ -308,9 +308,7 @@ def MUTATE_circle(circle, color, n):
     # HINT: This function can be implemented with just TWO lines of code.
 
 
-# ----------------------------------------------------------------------
-# If this module is running at the top level (as opposed to being
-# imported by another module), then call the 'main' function.
-# ----------------------------------------------------------------------
-if __name__ == '__main__':
-    main()
+# -----------------------------------------------------------------------------
+# Calls  main  to start the ball rolling.
+# -----------------------------------------------------------------------------
+main()

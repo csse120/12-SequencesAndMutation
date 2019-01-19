@@ -22,9 +22,9 @@ def run_test_RETURN_delete_negatives():
     print('Testing RETURN_delete_negatives:')
     print('--------------------------------')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Test 1:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     run_test_number = 1
     original_argument = [-30.2, 50, 12.5, -1, -5, 8, 0]
     correct_argument_value_after_function_call = original_argument.copy()
@@ -36,9 +36,9 @@ def run_test_RETURN_delete_negatives():
                          correct_returned_value,
                          correct_argument_value_after_function_call)
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Test 2:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     run_test_number = 2
     original_argument = [2, 0, -9, 1, -30]
     correct_argument_value_after_function_call = original_argument.copy()
@@ -81,9 +81,9 @@ def run_test_MUTATE_delete_negatives():
     print('Testing MUTATE_delete_negatives:')
     print('--------------------------------')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Test 1:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     run_test_number = 1
     original_argument = [-30.2, 50, 12.5, -1, -5, 8, 0]
     correct_argument_value_after_function_call = [50, 12.5, 8, 0]
@@ -95,9 +95,9 @@ def run_test_MUTATE_delete_negatives():
                          correct_returned_value,
                          correct_argument_value_after_function_call)
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Test 2:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     run_test_number = 2
     original_argument = [2, 0, -9, 1, -30]
     correct_argument_value_after_function_call = [2, 0, 1]
@@ -139,9 +139,7 @@ def MUTATE_delete_negatives(numbers):
     # HINT #2: Why might it be wise to start at the end and
     #       work backwards through the list to the beginning?
 
-# ----------------------------------------------------------------------
-# If this module is running at the top level (as opposed to being
-# imported by another module), then call the 'main' function.
-# ----------------------------------------------------------------------
-if __name__ == '__main__':
-    main()
+# -----------------------------------------------------------------------------
+# Calls  main  to start the ball rolling.
+# -----------------------------------------------------------------------------
+main()

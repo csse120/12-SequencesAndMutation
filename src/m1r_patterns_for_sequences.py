@@ -17,7 +17,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # TODO: 2. SKIM the program below and RUN it.
 #
 #   Then look more closely at the CODE for:
@@ -38,16 +38,16 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #     -- TWO-SEQUENCES-IN-PARALLEL
 #   then:
 #      change the above TODO to DONE.
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 import math
 
 
 def main():
     """ Demonstrates some patterns for ITERATING through SEQUENCES. """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Demonstrate the    BEGINNING-TO-END    and   COUNTING   patterns.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print()
     print('-----------------------------------------------------------')
     print('Demonstrating the   BEGINNING-TO-END   pattern,')
@@ -60,9 +60,9 @@ def main():
     print('  ', sequence)
     print('The number of integers in that sequence is', answer)
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Demonstrate the    OTHER-RANGES    pattern.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print()
     print('-----------------------------------------------------------')
     print('Demonstrating the   OTHER-RANGES   pattern')
@@ -72,9 +72,9 @@ def main():
     sequence = [88, 232, 8.5, -11, 'Grandmother', 22, 4.3, 9.0, 7.0]
     other_ranges(sequence)
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Demonstrate the    FIND    pattern.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print()
     print('-----------------------------------------------------------')
     print('Demonstrating the   FIND   pattern, in several variations:')
@@ -90,9 +90,9 @@ def main():
     print('  Case 2:  The item  ** IS NOT **  in the sequence:')
     find([1, 2, 5])
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Demonstrate the    MAX/MIN    pattern.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print()
     print('-----------------------------------------------------------')
     print('Demonstrating the  MAX/MIN  pattern, in several variations:')
@@ -101,9 +101,9 @@ def main():
     sequence = [4, 66, 33, 90, 93, 3, 3, 3, 2, 15]
     max_min(sequence)
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Demonstrate the    TWO-PLACES-IN-THE-SEQUENCE-AT-ONCE    pattern.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print()
     print('-----------------------------------------------------------')
     print('Demonstrating  TWO-PLACES-IN-THE-SEQUENCE-AT-ONCE  pattern:')
@@ -114,9 +114,9 @@ def main():
     answer = two_places_at_once(sequence)
     print('The sequence increments at', answer, 'places.')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Demonstrate the    TWO-SEQUENCES-IN-PARALLEL    pattern.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print()
     print('-----------------------------------------------------------')
     print('Demonstrating the   TWO-SEQUENCES-IN-PARALLEL   pattern:')
@@ -130,9 +130,9 @@ def main():
     print('The 2nd sequence exceeds the 1st at', answer, 'places.')
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # The   BEGINNING-TO-END   pattern:
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def beginning_to_end(sequence):
     """
     Demonstrates iterating (looping) through a sequence in the most
@@ -141,13 +141,13 @@ def beginning_to_end(sequence):
     This particular example returns the number of items in the sequence
     that are integers. It also prints the index during the looping.
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # The   BEGINNING-TO-END   pattern is:
     #
     #    for k in range(len(sequence)):
     #        ... sequence[k] ...
     #
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     count = 0
     for k in range(len(sequence)):
         if type(sequence[k]) == int:
@@ -157,9 +157,9 @@ def beginning_to_end(sequence):
     return count
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # The   OTHER-RANGES   pattern:
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def other_ranges(sequence):
     """
     Demonstrates iterating (looping) through a sequence in a pattern
@@ -168,7 +168,7 @@ def other_ranges(sequence):
     This particular example prints every 3rd item of the sequence,
     but starting at the END of the list (and going backwards).
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # The   OTHER-RANGES   pattern can be thought of as having
     #   any of three equivalent forms.
     # Choose the form that makes the most sense to you.
@@ -205,30 +205,30 @@ def other_ranges(sequence):
     #    So BLAH may be simpler, but the RANGE expression is harder.
     # FORM 3: Like FORM 1,
     #    but uses an auxiliary variable to simplify figuring out BLAH.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     print('Printing backwards, every 3rd item, ONE WAY:')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Solution using FORM 1:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     last = len(sequence) - 1
     for k in range(len(sequence) // 3):
         print(sequence[last - (k * 3)])
 
     print('\nANOTHER way:')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Solution using FORM 2:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     last = len(sequence) - 1
     for k in range(last, -1, -3):
         print(sequence[k])
 
     print('\nYET ANOTHER way:')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Solution using FORM 3:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     last = len(sequence) - 1
     m = last
     for k in range(len(sequence) // 3):
@@ -236,9 +236,9 @@ def other_ranges(sequence):
         m = m - 3
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # The   FIND   pattern, in its several variations:
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def find(sequence):
     """
     Demonstrates FINDING an item in a sequence.  Its forms include:
@@ -255,7 +255,7 @@ def find(sequence):
       -- the INDEX of the found item (per 2a above)
       -- the ITEM that was found (per 2b above)
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # The   FIND   pattern is:
     #
     #     for k in range(len(sequence)):
@@ -275,7 +275,7 @@ def find(sequence):
     #
     # Also, some problems might require you to search through only part
     # of the sequence (not all of it) or to search backwards, or ...
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
     answer1 = find_example1(sequence)
     answer2 = find_example2(sequence)
@@ -326,9 +326,9 @@ def find_example3(sequence):
     return None
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # The   MAX/MIN   pattern, in several variations:
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def max_min(sequence):
     """
     Demonstrates determining the item in a sequence whose BLAH
@@ -342,7 +342,7 @@ def max_min(sequence):
       -- The index of the number in the sequence
            whose cosine is smallest
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # The   MIN   pattern is as follows (with  MAX  being similar):
     #
     #     index_of_min = 0
@@ -358,7 +358,7 @@ def max_min(sequence):
     #
     # The above returns the INDEX where the item was found.
     # Some problems ask for the item itself.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
     print('The sequence is:', sequence)
     answer1 = min_index(sequence)
@@ -384,9 +384,9 @@ def min_index(sequence):
 
     Precondition: the sequence is a non-empty sequence of numbers.
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Return the INDEX of the smallest item in the sequence.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     index_of_min = 0
     for k in range(1, len(sequence)):
         if sequence[k] < sequence[index_of_min]:
@@ -401,10 +401,10 @@ def min_item(sequence):
 
     Precondition: the sequence is a non-empty sequence of numbers.
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Use the same code as above to find the INDEX of the smallest item.
     # But return the item itself, in this variation.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     index_of_min = min_index(sequence)
     return sequence[index_of_min]
 
@@ -416,10 +416,10 @@ def min_cosine(sequence):
 
     Precondition: the sequence is a non-empty sequence of numbers.
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Very similar to   min_index   above.  Just compare the COSINES
     #   of the numbers instead of the numbers themselves.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     index_of_min = 0
     for k in range(1, len(sequence)):
         if math.cos(sequence[k]) < math.cos(sequence[index_of_min]):
@@ -428,9 +428,9 @@ def min_cosine(sequence):
     return index_of_min
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # The   TWO-PLACES-AT-ONCE   pattern:
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def two_places_at_once(sequence):
     """
     Demonstrates iterating (looping) through a sequence,
@@ -442,7 +442,7 @@ def two_places_at_once(sequence):
     then the function returns   4
     since   66 > 4   and   90 > 33   and   93 > 90   and   15 > 2.
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # The   TWO-PLACES-AT-ONCE   pattern is:
     #
     #    for k in range( BLAH ):
@@ -454,7 +454,7 @@ def two_places_at_once(sequence):
     #       FOO_2 is another function of k that gives the OTHER
     #             of the "two places at once" to examine.
     # Typically, FOO_1 or FOO_2 (but not both) is simply k.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     count = 0
     for k in range(len(sequence) - 1):
         if sequence[k + 1] > sequence[k]:
@@ -463,9 +463,9 @@ def two_places_at_once(sequence):
     return count
 
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # The   TWO-SEQUENCES-IN-PARALLEL   pattern:
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 def two_sequences_in_parallel(sequence1, sequence2):
     """
     Demonstrates iterating (looping) through TWO sequences in PARALLEL.
@@ -478,7 +478,7 @@ def two_sequences_in_parallel(sequence1, sequence2):
         [55, 10, 30, 30, 30, 30]
     then this function returns 3, since 55 > 11 and 30 > 10 and 30 > 12.
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # The TWO-SEQUENCES-IN-PARALLEL pattern is:
     #
     #    for k in range(len(sequence1)):
@@ -486,7 +486,7 @@ def two_sequences_in_parallel(sequence1, sequence2):
     #
     # The above assumes that the sequences are of equal length
     # (or that you just want to do the length of sequence1).
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     count = 0
     for k in range(len(sequence1)):
         if sequence1[k] > sequence2[k]:
@@ -494,7 +494,7 @@ def two_sequences_in_parallel(sequence1, sequence2):
 
     return count
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 main()

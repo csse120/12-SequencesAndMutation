@@ -7,11 +7,11 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # STUDENTS:
 #  Be sure to READ and RUN the examples in the preceding files.
 #  Be sure to understand those examples BEFORE doing these exercises!
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 
 def main():
@@ -26,9 +26,9 @@ def run_test_RETURN_replace_negatives_by_zeros():
     print('Testing RETURN_replace_negatives_by_zeros:')
     print('------------------------------------------')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Test 1:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     run_test_number = 1
     original_argument = [-30.2, 50, 12.5, -1, -5, 8, 0]
     correct_argument_value_after_function_call = original_argument.copy()
@@ -40,9 +40,9 @@ def run_test_RETURN_replace_negatives_by_zeros():
              correct_returned_value,
              correct_argument_value_after_function_call)
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Test 2:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     run_test_number = 2
     original_argument = [2, 0, -9, 1, -30]
     correct_argument_value_after_function_call = original_argument.copy()
@@ -142,9 +142,9 @@ def run_test_MUTATE_replace_negatives_by_zeros():
     print('Testing MUTATE_replace_negatives_by_zeros:')
     print('------------------------------------------')
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Test 1:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     run_test_number = 1
     original_argument = [-30.2, 50, 12.5, -1, -5, 8, 0]
     correct_argument_value_after_function_call = [0, 50, 12.5, 0, 0, 8, 0]
@@ -156,9 +156,9 @@ def run_test_MUTATE_replace_negatives_by_zeros():
              correct_returned_value,
              correct_argument_value_after_function_call)
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Test 2:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     run_test_number = 2
     original_argument = [2, 0, -9, 1, -30]
     correct_argument_value_after_function_call = [2, 0, 0, 1, 0]
@@ -190,9 +190,7 @@ def MUTATE_replace_negatives_by_zeros(numbers):
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
 
-# ----------------------------------------------------------------------
-# If this module is running at the top level (as opposed to being
-# imported by another module), then call the 'main' function.
-# ----------------------------------------------------------------------
-if __name__ == '__main__':
-    main()
+# -----------------------------------------------------------------------------
+# Calls  main  to start the ball rolling.
+# -----------------------------------------------------------------------------
+main()

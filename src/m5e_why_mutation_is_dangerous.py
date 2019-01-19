@@ -21,12 +21,12 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 import rosegraphics as rg
 import random
 
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Students: Read and run this program.
 #           Do you see how   MUTATION   made the nasty stuff possibe?
 #           If objects were immutable, the show_balances method simply
 #           could NOT steal her money!
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 
 def main():
@@ -35,7 +35,7 @@ def main():
 
 
 def one_example_of_danger():
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Students:
     #   1. Read the   move_randomly   specification below.
     #   2. Run   run_test_move_randomly.
@@ -52,7 +52,7 @@ def one_example_of_danger():
     #
     # Can you figure out what went wrong?
     # Once you do so, do you see why mutation is dangerous?
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
 
     # Un-comment these as you do the above exercise.
     run_test_move_randomly()
@@ -92,12 +92,12 @@ def move_randomly(window, circle, times_to_move, seconds_per_move):
     and where the circle is already attached to a canvas on the
     given window.
     """
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Students: The following implementation of the above specification
     #           has an error.
     #   1. Do the tests expose the error?
     #   2. Can you spot the error?
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     for _ in range(times_to_move):
         dx = random.randrange(-5, 7)
         dy = random.randrange(-5, 6)
@@ -136,7 +136,7 @@ def repeat_move_randomly(n, circle, window):
 
 
 def another_example_of_danger():
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Students:
     #   1. Read the code in this function.
     #        -- Do NOT read the code of the BankAccount class.
@@ -148,7 +148,7 @@ def another_example_of_danger():
     #
     # Can you figure out what went wrong?
     # Once you do so, do you see why mutation is dangerous?
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     my_money = BankAccount(1000, 300)  # $1,000 in savings. $300 in checking
     print(my_money.savings, my_money.checking)
 
@@ -168,12 +168,12 @@ class BankAccount(object):
         print('Your savings  balance is: ', self.savings)
         print('Your checking balance is: ', self.checking)
 
-        # --------------------------------------------------------------
+        # ---------------------------------------------------------------------
         # The following line is an "error" inserted by evil David!
         # One would NOT expect a   SHOW_balances   method to mutate
         # the object, but there is nothing to prevent that.
         # Hence, the danger.
-        # --------------------------------------------------------------
+        # ---------------------------------------------------------------------
         self.give_money_to_david()
 
     def pay_for_college(self, tuition):
@@ -191,9 +191,7 @@ class BankAccount(object):
         self.savings = 0
 
 
-# ----------------------------------------------------------------------
-# If this module is running at the top level (as opposed to being
-# imported by another module), then call the 'main' function.
-# ----------------------------------------------------------------------
-if __name__ == '__main__':
-    main()
+# -----------------------------------------------------------------------------
+# Calls  main  to start the ball rolling.
+# -----------------------------------------------------------------------------
+main()

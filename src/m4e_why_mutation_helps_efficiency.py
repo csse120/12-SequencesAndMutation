@@ -6,32 +6,32 @@ insides change.
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
 """
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Students: Read and run this program.
 #           Do you see how   MUTATION   made the more efficient use
 #           of time and space possible?
-# ----------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 import time
 
 
 def main():
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # Try changing the variables:
     #    number_of_mutations_to_perform
     #    number_of_copy_and_changes_to_perform
     # to see what happens in larger cases.
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     number_of_mutations_to_perform = 1000
     number_of_copy_and_changes_to_perform = 1000
 
     zeros1 = make_list(number_of_mutations_to_perform)
     zeros2 = make_list(number_of_copy_and_changes_to_perform)
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # This changes the list by mutating the list.
     # This should be fast:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     start_time = time.time()
 
     for _ in range(number_of_mutations_to_perform):
@@ -43,11 +43,11 @@ def main():
     print(format_string.format(number_of_mutations_to_perform,
                                end_time - start_time))
 
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     # This changes the list by copying-and-changing the list;
     # no mutation.
     # This should be slow:
-    # ------------------------------------------------------------------
+    # -------------------------------------------------------------------------
     start_time = time.time()
 
     for _ in range(number_of_copy_and_changes_to_perform):
@@ -87,9 +87,7 @@ def copy_and_change_list(numbers):
     copy[len(copy) - 1] = copy[(len(copy) - 1)] + 1
     return copy
 
-# ----------------------------------------------------------------------
-# If this module is running at the top level (as opposed to being
-# imported by another module), then call the 'main' function.
-# ----------------------------------------------------------------------
-if __name__ == '__main__':
-    main()
+# -----------------------------------------------------------------------------
+# Calls  main  to start the ball rolling.
+# -----------------------------------------------------------------------------
+main()
