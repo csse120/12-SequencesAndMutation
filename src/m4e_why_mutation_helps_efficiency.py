@@ -3,9 +3,8 @@ This module demonstrates how MUTATION allows for MORE EFFICIENT
 use of TIME and SPACE when a container object repeatedly has its
 insides change.
 
-Authors: David Mutchler, Amanda Stouder, Chandan Rupakheti, Katie Dion,
-         Claude Anderson, Delvin Defoe, Curt Clifton, Matt Boutell,
-         and their colleagues.
+Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
+         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
 """
 # ----------------------------------------------------------------------
 # Students: Read and run this program.

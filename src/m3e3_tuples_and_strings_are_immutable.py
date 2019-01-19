@@ -2,9 +2,8 @@
 This module demonstrates that  TUPLES  and  STRINGS  are IMMUTABLE:
   -- Attempts to mutate them cause run-time errors.
 
-Authors: David Mutchler, Amanda Stouder, Chandan Rupakheti, Katie Dion,
-         Claude Anderson, Delvin Defoe, Curt Clifton, Matt Boutell,
-         and their colleagues.
+Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
+         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
 """
 # ----------------------------------------------------------------------
 # Students: Read and run this program in the debugger to watch attemps

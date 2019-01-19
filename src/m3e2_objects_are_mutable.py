@@ -3,9 +3,8 @@ This module demonstrates   MUTATION   of an OBJECT in two ways:
   -- From an assignment in main.
   -- From within a function call.
 
-Authors: David Mutchler, Amanda Stouder, Chandan Rupakheti, Katie Dion,
-         Claude Anderson, Delvin Defoe, Curt Clifton, Matt Boutell,
-         and their colleagues.
+Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
+         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
 """
 # ----------------------------------------------------------------------
 # Students: Read and run this program in the debugger to watch

@@ -14,9 +14,8 @@ Example 2:
        show_balances   method, that steals the rest of her savings!
   -- So her money is now gone!
 
-Authors: David Mutchler, Amanda Stouder, Chandan Rupakheti, Katie Dion,
-         Claude Anderson, Delvin Defoe, Curt Clifton, Matt Boutell,
-         and their colleagues.
+Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
+         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
 """
 
 import rosegraphics as rg
