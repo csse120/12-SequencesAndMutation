@@ -23,8 +23,8 @@ import random
 
 # -----------------------------------------------------------------------------
 # Students: Read and run this program.
-#           Do you see how   MUTATION   made the nasty stuff possibe?
-#           If objects were immutable, the show_balances method simply
+#           Do you see how   MUTATION   made the nasty stuff possible?
+#           If objects were immutable, the  show_balances  method simply
 #           could NOT steal her money!
 # -----------------------------------------------------------------------------
 
@@ -65,13 +65,13 @@ def run_test_move_randomly():
 
     circle1 = rg.Circle(rg.Point(400, 250), 50)
     circle1.fill_color = 'blue'
-    circle1.attach_to(window.initial_canvas)
-    move_randomly(window, circle1, 100, 0.05)
+    circle1.attach_to(window)
+    move_randomly(window, circle1, 50, 0.05)
 
     circle2 = rg.Circle(rg.Point(200, 100), 30)
     circle2.fill_color = 'red'
-    circle2.attach_to(window.initial_canvas)
-    move_randomly(window, circle2, 500, 0.01)
+    circle2.attach_to(window)
+    move_randomly(window, circle2, 250, 0.01)
 
     window.close_on_mouse_click()
 
@@ -87,10 +87,9 @@ def move_randomly(window, circle, times_to_move, seconds_per_move):
       :type window: rg.RoseWindow
       :type circle: rg.Circle
       :type times_to_move: int
-      :type seconds_per_move: (float, int)
-    where the times_to_move and seconds_per_move are nonnegative
-    and where the circle is already attached to a canvas on the
-    given window.
+      :type seconds_per_move: float | int
+    where the times_to_move and seconds_per_move are non-negative
+    and where the circle is already attached to the given window.
     """
     # -------------------------------------------------------------------------
     # Students: The following implementation of the above specification
@@ -111,7 +110,7 @@ def run_test_repeat_move_randomly():
 
     circle = rg.Circle(rg.Point(400, 250), 50)
     circle.fill_color = 'green'
-    circle.attach_to(window.initial_canvas)
+    circle.attach_to(window)
     repeat_move_randomly(5, circle, window)
 
     window.close_on_mouse_click()
@@ -119,19 +118,19 @@ def run_test_repeat_move_randomly():
 
 def repeat_move_randomly(n, circle, window):
     """
-    Runs   move_randomly   n times using the given circle and window,
-    each time making 1000 random moves with 0 seconds pause after each.
-    Waits for a mouse click after each of the n trials.
+    Runs   move_randomly   n   times using the given circle and window,
+    each time making 200 random moves with 0 seconds pause after each.
+    Waits for a mouse click after each of the   n   trials.
 
     Preconditions:
       :type n: int
       :type circle: rg.Circle
       :type window: rg.RoseWindow
-    where n is nonnegative and the circle is already attached
-    to a canvas on the given window.
+    where n is non-negative and the circle is already attached
+    to the given window.
     """
     for _ in range(n):
-        move_randomly(window, circle, 1000, 0)
+        move_randomly(window, circle, 200, 0)
         window.continue_on_mouse_click()
 
 
@@ -150,7 +149,7 @@ def another_example_of_danger():
     # Once you do so, do you see why mutation is dangerous?
     # -------------------------------------------------------------------------
     my_money = BankAccount(1000, 300)  # $1,000 in savings. $300 in checking
-    print(my_money.savings, my_money.checking)
+    print('Savings, checking:', my_money.savings, my_money.checking)
 
     my_money.pay_for_college(100)  # Uses $100 of my savings as tuition
     my_money.show_balances()

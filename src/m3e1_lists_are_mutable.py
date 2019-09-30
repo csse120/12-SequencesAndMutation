@@ -42,7 +42,7 @@ def main():
     print(numbers, numbers2)  # Prints the two DIFFERENT lists
 
     # -------------------------------------------------------------------------
-    # Shows the difference betwee the   is   operator
+    # Shows the difference between the   is   operator
     #    (two things refer to the same place in memory)
     # and the   ==   operator (two things contain the same data).
     # -------------------------------------------------------------------------
@@ -50,15 +50,16 @@ def main():
     numbers4 = [1, 2, 3]
     numbers5 = numbers3
 
-    print(numbers3 is numbers4)
-    print(numbers3 == numbers4)
+    print(numbers3 is numbers4)  # False
+    print(numbers3 == numbers4)  # True
 
-    print(numbers3 is numbers5)
-    print(numbers3 is numbers4)
+    print(numbers3 is numbers5)  # True
+    print(numbers3 == numbers4)  # True
 
 
 def mutate_numbers(numbers):
     numbers[2] = -1
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

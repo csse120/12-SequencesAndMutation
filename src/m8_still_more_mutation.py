@@ -65,6 +65,7 @@ def RETURN_delete_negatives(numbers):
       :type numbers: list
     where the list is a list of numbers.
     """
+    # -------------------------------------------------------------------------
     # TODO: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          In particular, note how it calls the   run_test   function
@@ -72,6 +73,7 @@ def RETURN_delete_negatives(numbers):
     #             m6_mutation.run_test(...)
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
+    # -------------------------------------------------------------------------
 
 
 def run_test_MUTATE_delete_negatives():
@@ -124,6 +126,7 @@ def MUTATE_delete_negatives(numbers):
 
     Precondition: The argument is a list of numbers.
     """
+    # -------------------------------------------------------------------------
     # TODO: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          In particular, note how it calls the   run_test   function
@@ -131,13 +134,14 @@ def MUTATE_delete_negatives(numbers):
     #             m6_mutation.run_test(...)
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
-    #
-    # HINT: This problem is MUCH harder than it would appear,
+    #   HINT: This problem is MUCH harder than it would appear,
     #       for various quite-subtle reasons.
     #       Take a stab at this problem,
-    #       then ask for help as needed.
-    # HINT #2: Why might it be wise to start at the end and
+    #       then ask for help as needed (perhaps using Piazza).
+    #   HINT #2: Why might it be wise to start at the end and
     #       work backwards through the list to the beginning?
+    # -------------------------------------------------------------------------
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

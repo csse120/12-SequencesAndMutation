@@ -32,12 +32,12 @@ def run_test_RETURN_circle():
     # -------------------------------------------------------------------------
     window = rg.RoseWindow(500, 400, 'Testing RETURN_circle')
     text = rg.Text(rg.Point(250, 125), '')
-    text.attach_to(window.initial_canvas)
+    text.attach_to(window)
 
     circle = rg.Circle(rg.Point(200, 300), 50)
     circle.fill_color = 'blue'
 
-    circle.attach_to(window.initial_canvas)
+    circle.attach_to(window)
 
     msg = 'Note: If you see an error message at ANY point,\n'
     msg = msg + 'then you have failed this test.\n\n'
@@ -52,7 +52,7 @@ def run_test_RETURN_circle():
     new_circle = RETURN_circle(circle, 'red')
 
     if new_circle:
-        new_circle.attach_to(window.initial_canvas)
+        new_circle.attach_to(window)
 
     msg = 'I have now called your   RETURN_circle   function\n'
     msg = msg + 'and drawn the CLONED, RED circle that your\n'
@@ -66,7 +66,7 @@ def run_test_RETURN_circle():
     window.get_next_mouse_click()
 
     if new_circle:
-        new_circle.detach_from(window.initial_canvas)
+        new_circle.detach_from(window)
 
     msg = 'I have now UN-drawn the CLONED, RED circle.\n\n'
     msg = msg + 'So you should see the original, BLUE circle below\n'
@@ -76,7 +76,7 @@ def run_test_RETURN_circle():
     window.render(0.5)
     window.get_next_mouse_click()
 
-    circle.detach_from(window.initial_canvas)
+    circle.detach_from(window)
 
     msg = 'I have now UN-drawn the ORIGINAL, blue circle.\n\n'
     msg = msg + 'So you should see NO circles below.\n\n'
@@ -86,7 +86,7 @@ def run_test_RETURN_circle():
     window.get_next_mouse_click()
 
     if new_circle:
-        new_circle.attach_to(window.initial_canvas)
+        new_circle.attach_to(window)
 
     msg = 'Now I have RE-drawn the CLONED, RED circle\n'
     msg = msg + 'that your   RETURN_circle   function\n'
@@ -108,7 +108,7 @@ def run_test_RETURN_circle():
     new_circle = RETURN_circle(circle, 'green')
 
     if new_circle:
-        new_circle.attach_to(window.initial_canvas)
+        new_circle.attach_to(window)
 
     msg = 'Now I have ALSO drawn the CLONED, GREEN circle\n'
     msg = msg + 'that your   RETURN_circle   function\n'
@@ -122,7 +122,7 @@ def run_test_RETURN_circle():
     window.get_next_mouse_click()
 
     if new_circle:
-        new_circle.detach_from(window.initial_canvas)
+        new_circle.detach_from(window)
 
     msg = 'I have now UN-drawn the CLONED, GREEN circle.\n\n'
     msg = msg + 'So you should see the cloned, RED circle below\n'
@@ -136,9 +136,9 @@ def run_test_RETURN_circle():
                                 'white')
 
     if new_circle:
-        new_circle.attach_to(window.initial_canvas)
+        new_circle.attach_to(window)
     if new_circle2:
-        new_circle2.attach_to(window.initial_canvas)
+        new_circle2.attach_to(window)
 
     msg = 'I have now RE-drawn the CLONED, GREEN circle.\n'
     msg = msg + 'Additionally, I called your   RETURN_circle   function\n'
@@ -165,16 +165,17 @@ def RETURN_circle(circle, color):
 
     Preconditions:
       :type circle:  rg.Circle
-      :type color: (str, rg.Color)
+      :type color: str | rg.Color
     where the color is either a string that Rosegraphics understands
     or a rg.Color object.
     """
+    # -------------------------------------------------------------------------
     # TODO: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
-    #
-    # HINT: Use the   clone   method to make the copy.
+    #  HINT: Use the   clone   method to make the copy.
+    # -------------------------------------------------------------------------
 
 
 def run_test_MUTATE_circle():
@@ -299,13 +300,15 @@ def MUTATE_circle(circle, color, n):
     This function must NOT return anything (other than the default None).
 
     Precondition: The first argument is a rg.Circle and the second
-                  argument is a color appropriate for Zellegraphics.
+                  argument is a color appropriate for RoseGraphics.
     """
+    # -------------------------------------------------------------------------
     # TODO: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
-    # HINT: This function can be implemented with just TWO lines of code.
+    #   HINT: This function can be implemented with just TWO lines of code.
+    # -------------------------------------------------------------------------
 
 
 # -----------------------------------------------------------------------------

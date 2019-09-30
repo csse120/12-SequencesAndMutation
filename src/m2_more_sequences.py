@@ -311,12 +311,12 @@ def is_palindrome(s):
     # -------------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #     The testing code is already written for you (above).
-    #
-    ###########################################################################
-    # IMPORTANT:  As with ALL problems, work a concrete example BY HAND
+    #  ___
+    #  ########################################################################
+    #   IMPORTANT:  As with ALL problems, work a concrete example BY HAND
     #   to figure out how to solve this problem.  The last two examples
     #   above are particularly good examples to work by hand.
-    ###########################################################################
+    #  ########################################################################
     # -------------------------------------------------------------------------
 
 

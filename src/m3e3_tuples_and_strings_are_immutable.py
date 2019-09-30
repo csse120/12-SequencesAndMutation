@@ -6,7 +6,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Derek Whitley, and their colleagues.
 """
 # -----------------------------------------------------------------------------
-# Students: Read and run this program in the debugger to watch attemps
+# Students: Read and run this program in the debugger to watch attempts
 #           to mutate a TUPLE and a STRING cause run-time errors.
 # -----------------------------------------------------------------------------
 
@@ -33,12 +33,13 @@ def main():
     # -------------------------------------------------------------------------
     # 5. Attempts to change the INSIDES of the tuple,
     #       that is, attempts to MUTATE the tuple.
-    # 6. Attemps to change the INSIDES of the string,
+    # 6. Attempts to change the INSIDES of the string,
     #       that is, attempts to MUTATE the string.
     # These cause RUN-TIME errors.
     # -------------------------------------------------------------------------
     numbers[2] = 77
     s[0] = 'X'
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
