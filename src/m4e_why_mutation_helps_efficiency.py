@@ -4,7 +4,7 @@ use of TIME and SPACE when a container object repeatedly has its
 insides change.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
+         Mark Hays, Amanda Stouder, Derek Whitley, and their colleagues.
 """
 # -----------------------------------------------------------------------------
 # Students: Read and run this program.

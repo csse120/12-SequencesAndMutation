@@ -4,7 +4,7 @@ This module demonstrates   MUTATION   of a LIST in two ways:
   -- From within a function call.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
+         Mark Hays, Amanda Stouder, Derek Whitley, and their colleagues.
 """
 # -----------------------------------------------------------------------------
 # Students: Read and run this program in the debugger to watch

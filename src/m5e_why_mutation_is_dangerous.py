@@ -15,7 +15,7 @@ Example 2:
   -- So her money is now gone!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Mark Hays, Amanda Stouder, Aaron Wilkin, and their colleagues.
+         Mark Hays, Amanda Stouder, Derek Whitley, and their colleagues.
 """
 
 import rosegraphics as rg
