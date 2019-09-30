@@ -13,13 +13,14 @@ Of course, these are not the only patterns, and some problems require
 combining these patterns, but this is a good base upon which to build.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
+         Mark Hays, Amanda Stouder, Derek Whitley, their colleagues,
          and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+
 # -----------------------------------------------------------------------------
 # TODO: 2. SKIM the program below and RUN it.
-#
+#   ___
 #   Then look more closely at the CODE for:
 #     -- find_example1
 #     -- find_example2
@@ -28,7 +29,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #     -- min_item
 #     -- two_places_at_once
 #     -- two_sequences_in_parallel
-#
+#   ___
 #   When you have read them, asking questions as needed,
 #   and you feel that you understand (at least mostly)
 #   the patterns for:
@@ -37,14 +38,18 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #     -- TWO-PLACES-AT-ONCE, and
 #     -- TWO-SEQUENCES-IN-PARALLEL
 #   then:
-#      change the above TODO to DONE.
+#      change the above _TODO_ to DONE.
 # -----------------------------------------------------------------------------
 
 import math
 
 
 def main():
-    """ Demonstrates some patterns for ITERATING through SEQUENCES. """
+    """
+    Demonstrates some patterns for ITERATING through SEQUENCES.
+    These are the CALLS to code that uses the patterns.
+    See further below for the CODE ITSELF that uses the pattersn.
+    """
     # -------------------------------------------------------------------------
     # Demonstrate the    BEGINNING-TO-END    and   COUNTING   patterns.
     # -------------------------------------------------------------------------
@@ -54,7 +59,7 @@ def main():
     print('   along with the   COUNTING   pattern:')
     print('-----------------------------------------------------------')
 
-    sequence = [88, 232, 8.5, -11, 'Grandmother', 22, 4.3, 9.0, 7.0]
+    sequence = [88, 232, 8.5, -11, 'Grandmother', 22, 4.3, 18 / 2, 7 // 2]
     answer = beginning_to_end(sequence)
     print('The test sequence is:')
     print('  ', sequence)
@@ -69,7 +74,7 @@ def main():
     print('   (backwards, every 3rd item)   in each of THREE FORMS:')
     print('-----------------------------------------------------------')
 
-    sequence = [88, 232, 8.5, -11, 'Grandmother', 22, 4.3, 9.0, 7.0]
+    sequence = [88, 232, 8.5, -11, 'Grandmother', 22, 4.3, 9.0, 3]
     other_ranges(sequence)
 
     # -------------------------------------------------------------------------
@@ -84,7 +89,7 @@ def main():
     print('Example: FINDING the first STRING in the sequence.')
     print()
     print('  Case 1:  The item  ** IS **  in the sequence:')
-    find([88, 232, 8.5, -11, 'Grandmother', 22, 'mother', 9.0, 7.0])
+    find([88, 232, 8.5, -11, 'Grandmother', 22, 'mother', 9.0, 3])
 
     print()
     print('  Case 2:  The item  ** IS NOT **  in the sequence:')
@@ -98,7 +103,7 @@ def main():
     print('Demonstrating the  MAX/MIN  pattern, in several variations:')
     print('-----------------------------------------------------------')
 
-    sequence = [4, 66, 33, 90, 93, 3, 3, 3, 2, 15]
+    sequence = [4, 66, 33, 90, 93, 2, 3, 3, 2, 15]
     max_min(sequence)
 
     # -------------------------------------------------------------------------
@@ -140,6 +145,8 @@ def beginning_to_end(sequence):
 
     This particular example returns the number of items in the sequence
     that are integers. It also prints the index during the looping.
+    Type hints:
+      :type sequence: list | tuple
     """
     # -------------------------------------------------------------------------
     # The   BEGINNING-TO-END   pattern is:
@@ -167,6 +174,8 @@ def other_ranges(sequence):
 
     This particular example prints every 3rd item of the sequence,
     but starting at the END of the list (and going backwards).
+    Type hints:
+      :type sequence: list | tuple
     """
     # -------------------------------------------------------------------------
     # The   OTHER-RANGES   pattern can be thought of as having
@@ -175,17 +184,17 @@ def other_ranges(sequence):
     #
     # FORM 1:
     #    for k in range( NUMBER ):
-    #        ... sequence[ BLAH ] ...
+    #        ... sequence[ BLAH_EXPRESSION ] ...
     #
     # where NUMBER is the number of items in the sequence to examine
-    # and   BLAH   is some formula involving k that is carefully
-    #                crafted to produce exactly the right indices.
+    # and   BLAH_EXPRESSION   is some formula involving k that is carefully
+    #                         crafted to produce exactly the right indices.
     #
     # FORM 2:
-    #    for k in range( BLAH ):
+    #    for k in range( BLAH_RANGE ):
     #        ... sequence[k] ...
     #
-    # where BLAH is some range OTHER than one that generates
+    # where BLAH_RANGE is some range OTHER than one that generates
     #    0, 1, 2, 3, ...
     # and is carefully crafted to produce exactly the right indices.
     #
@@ -195,16 +204,14 @@ def other_ranges(sequence):
     #        ... sequence[ m ] ...
     #
     # where NUMBER is the number of items in the sequence to examine
-    # and     m    is an auxiliary variable that is carefully
+    # and     m    is an auxiliary variable that is carefully crafted and
     #                controlled to produce exactly the right indices.
     #
-    # FORM 1: Puts all the heavy lifting into figuring out BLAH.
-    # FORM 2: Like FORM 1,
-    #    but uses a more sophisticated RANGE expression
-    #    to simplify figuring out BLAH.
-    #    So BLAH may be simpler, but the RANGE expression is harder.
+    # FORM 1: Puts all the heavy lifting into figuring out BLAH_EXPRESSION.
+    # FORM 2: Puts all the heavy lifting into figure out BLAH_RANGE.
     # FORM 3: Like FORM 1,
-    #    but uses an auxiliary variable to simplify figuring out BLAH.
+    #    but uses an auxiliary variable to simplify figuring out the
+    #    index of the sequence at each iteration of the loop.
     # -------------------------------------------------------------------------
     print('Printing backwards, every 3rd item, ONE WAY:')
 
@@ -254,6 +261,8 @@ def find(sequence):
       -- True or False (per item 1 above)
       -- the INDEX of the found item (per 2a above)
       -- the ITEM that was found (per 2b above)
+    Type hints:
+      :type sequence: list | tuple
     """
     # -------------------------------------------------------------------------
     # The   FIND   pattern is:
@@ -264,7 +273,7 @@ def find(sequence):
     #
     #     return -1
     #
-    # NOTE the placement of the TWO   return   statements!
+    # *** NOTE the placement of the TWO   return   statements! ***
     #
     # The above returns the INDEX where the item was found,
     #   or -1 if none was found.
@@ -291,6 +300,9 @@ def find_example1(sequence):
     """
     Returns True if the given sequence contains a string,
     else returns False.
+    Type hints:
+      :type sequence: list | tuple
+      :rtype: bool
     """
     # Returns True or False
     for k in range(len(sequence)):
@@ -304,6 +316,9 @@ def find_example2(sequence):
     """
     Returns the INDEX of the first string in the given sequence,
     or -1 if the given sequence contains no strings.
+    Type hints:
+      :type sequence: list | tuple
+      :rtype: int
     """
     # Returns the index (k) or -1
     for k in range(len(sequence)):
@@ -317,6 +332,9 @@ def find_example3(sequence):
     """
     Returns the FIRST STRING in the given sequence,
     or None if the sequence contains no strings.
+    Type hints:
+      :type sequence: list | tuple
+      :rtype: str
     """
     # Returns the item ( sequence[k] )  or  None
     for k in range(len(sequence)):
@@ -341,6 +359,8 @@ def max_min(sequence):
            (i.e., the smallest number in the sequence)
       -- The index of the number in the sequence
            whose cosine is smallest
+    Type hints:
+      :type sequence: list[int | float] | tuple[int | float]
     """
     # -------------------------------------------------------------------------
     # The   MIN   pattern is as follows (with  MAX  being similar):
@@ -381,7 +401,11 @@ def max_min(sequence):
 def min_index(sequence):
     """
     Returns the index of the smallest item in the given sequence.
+    Breaks ties in favor of the smallest index among the ties.
 
+    Type hints:
+      :type sequence: list[int | float] | tuple[int | float]
+      :rtype: int
     Precondition: the sequence is a non-empty sequence of numbers.
     """
     # -------------------------------------------------------------------------
@@ -399,6 +423,9 @@ def min_item(sequence):
     """
     Returns the smallest item in the given sequence.
 
+    Type hints:
+      :type sequence: list[int | float] | tuple[int | float]
+      :rtype: int | float
     Precondition: the sequence is a non-empty sequence of numbers.
     """
     # -------------------------------------------------------------------------
@@ -414,6 +441,9 @@ def min_cosine(sequence):
     Returns the index of the item in the sequence whose cosine
     is smallest.
 
+    Type hints:
+      :type sequence: list[int | float] | tuple[int | float]
+      :rtype: int
     Precondition: the sequence is a non-empty sequence of numbers.
     """
     # -------------------------------------------------------------------------
@@ -441,6 +471,10 @@ def two_places_at_once(sequence):
     For example, if the sequence is [4, 66, 33, 90, 93, 3, 3, 3, 2, 15],
     then the function returns   4
     since   66 > 4   and   90 > 33   and   93 > 90   and   15 > 2.
+
+    Type hints:
+      :type sequence: list[int | float] | tuple[int | float]
+      :rtype: int
     """
     # -------------------------------------------------------------------------
     # The   TWO-PLACES-AT-ONCE   pattern is:
@@ -477,6 +511,12 @@ def two_sequences_in_parallel(sequence1, sequence2):
         [11, 22, 10, 44, 33, 12]
         [55, 10, 30, 30, 30, 30]
     then this function returns 3, since 55 > 11 and 30 > 10 and 30 > 12.
+
+    Type hints:
+      :type sequence1: list[int | float] | tuple[int | float]
+      :type sequence2: list[int | float] | tuple[int | float]
+      :rtype: int
+    Precondition:  the two sequences are of equal length.
     """
     # -------------------------------------------------------------------------
     # The TWO-SEQUENCES-IN-PARALLEL pattern is:
@@ -493,6 +533,7 @@ def two_sequences_in_parallel(sequence1, sequence2):
             count = count + 1
 
     return count
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
