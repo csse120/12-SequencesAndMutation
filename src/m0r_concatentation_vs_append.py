@@ -29,7 +29,7 @@ import time
 
 
 def main():
-    size = 160000
+    size = 10000
 
     # Run and time the CONCATENATION approach:
     start_time = time.time()
@@ -58,18 +58,18 @@ def main():
 
 def using_concatenation_to_construct_a_list(n):
     """ Constructs [1, 2, 3, ... n] by using list concatenation. """
-    r = []
+    new = []
     for k in range(1, n + 1):
-        r = r + [k]
-    return r
+        new = new + [k]
+    return new
 
 
 def using_append_to_construct_a_list(n):
     """ Constructs [1, 2, 3, ... n] by using the  append  list method. """
-    r = []
+    new = []
     for k in range(1, n + 1):
-        r.append(k)
-    return r
+        new.append(k)
+    return new
 
 
 # -----------------------------------------------------------------------------
